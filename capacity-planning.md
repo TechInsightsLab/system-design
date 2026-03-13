@@ -12,8 +12,6 @@ Capacity planning is the process of estimating how much system resources are nee
 
 ✅ Prepared for growth – plan for future scale
 
-Even large companies rely heavily on capacity planning to keep their services running smoothly.
-
 ### Key Areas in Capacity Planning:
 
 1️⃣ Traffic / Workload:
@@ -26,7 +24,7 @@ Even large companies rely heavily on capacity planning to keep their services ru
 
 3️⃣ Compute / Servers:
 
-  Determine how many servers are required based on requests per second and CPU capacity.
+&emsp;&emsp; Determine how many servers are required based on requests per second and CPU capacity.
 
 4️⃣ Storage / Data Growth:
 
