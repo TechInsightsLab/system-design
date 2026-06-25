@@ -55,6 +55,7 @@ Amazon (flash sale stability)
 ---
 
 **⚖️ 2. Fair Resource Allocation (Multi-Tenant Systems)**
+
 Problem:
 
 One noisy customer consumes all system resources.
@@ -70,6 +71,7 @@ SaaS platforms like Salesforce enforce API quotas per tenant
 ---
 
 **🔐 3. Security Protection Beyond DDoS**
+
 Problem:
 
 Various attack patterns:
@@ -88,6 +90,7 @@ Login endpoints limited to ~5 attempts/minute
 ---
 
 **💰 4. Cost Control in Cloud Systems**
+
 Problem:
 
 Each request = cost (compute, DB, network)
@@ -105,6 +108,7 @@ Google Cloud quotas for APIs
 ---
 
 **🔄 5. Backpressure Handling (Critical Distributed Systems Concept)**
+
 Problem:
 
 Downstream service is slow → upstream keeps sending requests → system collapses
@@ -121,6 +125,7 @@ Load shedding
 ---
 
 **📉 6. Protecting Downstream Dependencies**
+
 Problem:
 
 Your service depends on:
@@ -141,6 +146,7 @@ Protecting a payment gateway like Stripe from overload
 ---
 
 **🧪 7. Experimentation & Feature Rollouts**
+
 Problem:
 
 New feature might break system under full load.
@@ -154,6 +160,7 @@ Limit exposure (canary release)
 ---
 
 **📊 8. Priority-Based Traffic Control**
+
 Problem:
 
 Not all traffic is equal:
@@ -167,6 +174,7 @@ Reserve capacity for important flows
 ---
 
 **📡 9. API Monetization & Quotas**
+
 Problem:
 
 You want to:
@@ -184,6 +192,7 @@ Usage tiers: 1000 free calls → paid beyond
 ---
 
 **🤖 10. Bot Control & Scraping Prevention**
+
 Problem:
 
 Bots:
@@ -198,6 +207,7 @@ Combine with CAPTCHA
 ---
 
 **🧵 11. Concurrency Control (Not Just Rate)**
+
 Problem:
 
 Too many simultaneous requests (not just per second)
@@ -213,6 +223,7 @@ Max 50 concurrent uploads per user
 ---
 
 **📬 12. Queue Protection & Stability**
+
 Problem:
 
 Message queues (Kafka, RabbitMQ) get flooded
@@ -224,6 +235,7 @@ Prevent lag buildup
 ---
 
 **🌍 13. Geo-based Traffic Control**
+
 Problem:
 
 Traffic spikes from specific regions (sometimes malicious)
@@ -234,6 +246,7 @@ Region-based rate limiting
 ---
 
 **🔁 14. Retry Storm Prevention**
+
 Problem:
 
 Clients retry aggressively when failures happen → makes outage worse
@@ -245,6 +258,7 @@ Combine with exponential backoff
 ---
 
 **🧩 15. Protecting Internal Microservices**
+
 Problem:
 
 Microservices call each other → internal DDoS possible
@@ -259,6 +273,7 @@ Uber microservice architecture
 ---
 
 **⚡ 16. Graceful Degradation Strategy**
+
 Problem:
 
 System overload → everything fails
@@ -273,6 +288,7 @@ Keep core functionality alive
 **---**
 
 **⚠️ 1. Legitimate Users Can Get Blocked**
+
 Problem:
 
 Good users may hit limits during:
@@ -289,6 +305,7 @@ A power user of Stripe hitting API limits during peak usage
 ---
 
 **⚖️ 2. Difficult to Choose the Right Limits**
+
 Problem:
 
 Too strict → users blocked
@@ -306,6 +323,7 @@ Monitoring + experimentation
 ---
 
 **🧠 3. Adds System Complexity**
+
 Problem:
 
 Simple system → becomes distributed + stateful
@@ -322,6 +340,7 @@ API gateways like Kong
 ---
 
 **🌍 4. Distributed System Challenges**
+
 Problem:
 
 In multi-server / multi-region systems:
@@ -339,6 +358,7 @@ Over-limiting OR under-limiting
 ---
 
 **🐢 5. Performance Overhead**
+
 Problem:
 
 Every request now requires:
@@ -352,6 +372,7 @@ Extra infrastructure cost
 ---
 
 **💥 6. Single Point of Failure Risk**
+
 Problem:
 
 If your rate limiter depends on a central store:
@@ -366,6 +387,7 @@ Availability vs protection
 ---
 
 **🔄 7. Poor Handling of Bursty Traffic (Depending on Algorithm)**
+
 Problem:
 
 Some algorithms (like Fixed Window):
@@ -378,6 +400,7 @@ Unpredictable behavior
 ---
 
 **🤖 8. Can Be Bypassed by Smart Attackers**
+
 Problem:
 
 Attackers distribute traffic across:
@@ -392,6 +415,7 @@ Per-IP rate limiting becomes useless
 ---
 
 **🔍 9. Hard to Debug & Observe**
+
 Problem:
 
 When a request fails:
@@ -406,6 +430,7 @@ Needs strong observability
 ---
 
 **📉 10. Not a Complete Security Solution**
+
 Problem:
 
 Rate limiting ≠ full protection
@@ -424,6 +449,7 @@ Behavioral analysis
 ---
 
 **💰 11. Infrastructure Cost**
+
 Problem:
 
 You need:
@@ -437,6 +463,7 @@ Gateway layer
 ---
 
 **🔁 12. Retry Storm Side Effects**
+
 Problem:
 
 When users hit limits:
@@ -448,6 +475,7 @@ Clients retry aggressively
 ---
 
 **🧪 13. Inconsistent User Experience Across Regions**
+
 Problem:
 
 In geo-distributed systems:
@@ -470,6 +498,7 @@ What about partial failures?
 ---
 
 **⚠️ 15. Can Interfere with Critical Flows**
+
 Problem:
 
 If not carefully designed:
