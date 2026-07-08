@@ -1,4 +1,5 @@
 
+```
 enterprise-system-design-handbook/
 │
 ├── README.md                  # Roadmap & Table of Contents
@@ -40,3 +41,4 @@ enterprise-system-design-handbook/
 └── assets/
     ├── diagrams/
     └── images/
+```
